@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+.wrapper {
+	overflow: hidden;
+	min-height: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.wrapper>main {
+	flex-grow: 1;
+}
+
+
+body {
+	font-family: "Lato", sans-serif;
+	color: #333;
+	background-color: rgb(235, 226, 226);
+}
+
+[class*="__container"] {
+	max-width: 1260px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 auto;
+}
+
+.page {}
+
+.page__main {}
+
+.header {
+	top: 0;
+	left: 0;
+	width: 100%;
+	position: fixed;
+	padding: 20px 0;
+	z-index: 100;
+}
+
+.header__container {
+	display: flex;
+	align-items: center;
+	gap: 60px;
+}
+
+.header__logo {}
+
+.header__menu {
+	flex-grow: 1;
+
+}
+
+.header__acttions {}
+
+.menu {}
+
+.menu__list {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 40px;
+	row-gap: 10px;
+}
+
+.menu__item {}
+
+.menu__link {
+	font-weight: 700;
+}
+
+.menu__link:hover {
+	text-decoration: underline;
+}
+
+
+.acttions-header {
+	display: flex;
+	align-items: center;
+	gap: 36px;
+	flex-wrap: wrap;
+}
+
+.acttions-header__button {}
+
+.acttions-header__auth {
+	background: url('../img/Profile.svg') left no-repeat;
+	padding-left: 24px;
+	font-weight: 700;
+	line-height: 1.25;
+}
+
+.acttions-header__auth:hover span {
+	text-decoration: underline;
+}
+
+.button {
+	position: relative;
+	border-radius: 4px;
+	background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+	font-weight: 700;
+	line-height: 1.25;
+	display: inline-block;
+	color: #fff;
+	padding: 16px 40px;
+	letter-spacing: o.5px;
+	z-index: 2;
+}
+
+.button :hover {
+	color: #333;
+
+}
+
+/* ========================================= */
+
+
+.main-block {
+	padding: 200px 0px 80px 0px;
+	background: linear-gradient(55.95deg, rgba(255, 64, 58, 0.2)0%, rgba(247, 94, 5, 0.2)100%);
+
+}
+
+.main-block__container {}
+
+.main-block__body {
+	margin-bottom: 190px;
+}
+
+.body-main {
+	display: flex;
+}
+
+
+
+.body-main__content {
+	margin-right: 40px;
+	flex: 0 1 50%;
+	align-self: center;
+}
+
+.body-main__play {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	gap: 16px;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.body-main__play:not(:last-child) {
+	margin-bottom: 40px;
+}
+
+.body-main__play::before {
+	content: "";
+	flex: 0 0 52px;
+	height: 52px;
+	width: 52px;
+	background: #FF3F3A url('../img/Polygon.svg') center no-repeat;
+	border-radius: 50%;
+}
+
+.body-main__play::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 52px;
+	width: 52px;
+	border-radius: 50%;
+	background: #FF3F3A;
+	opacity: 0.12;
+	transform: scale(1, 6);
+	animation: play-circle 1s infinite ease;
+}
+
+@keyframes play-circle {
+	0% {
+		transform: scale(1.6);
+	}
+
+	100% {
+		opacity: 0;
+		transform: scale(3);
+	}
+}
+
+.body-main__title {
+	font-weight: 900;
+	font-size: 64px;
+	line-height: 130%;
+	letter-spacing: 1px;
+	color: #1E212C;
+}
+
+.body-main__title:not(:last-child) {
+	margin-bottom: 60px;
+}
+
+.body-main__actions {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+}
+
+.body-main__actions:not(:last-child) {
+	margin-bottom: 40px;
+}
+
+.body-main__button {}
+
+.button {}
+
+/* 
+!!!кнопка
+.button--border { 
+	position: relative;
+	cursor: pointer;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.button--border span {
+	display: block;
+	padding: 10px 20px;
+}
+
+.button--border::before,
+.button--border::after {
+	content: "";
+	position: absolute;
+	top: 0;
+}
+
+.button--border::before {
+	left: 0;
+	width: 10px;
+	height: 100%;
+	border-radius: 10px 0 0 10px;
+	border: 5px solid #FF3F3A;
+	border-right: none;
+}
+
+.button--border::after {
+	right: 0;
+	width: 10px;
+	height: 100%;
+	border-radius: 0px 10px 10px 0px;
+	border: 5px solid #F75E05;
+	border-left: none;
+}*/
+
+.body-main__media {
+	flex: 0 1 50%;
+}
+
+
+.body-main__image {
+	transform: translate(7, 8%, 0px);
+	max-width: 107.8%;
+}
+
+.main-block__adventages {}
+
+.adventages-main {
+	gap: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.adventages-main__item {}
+
+
+
+.item-adventages {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	color: #1E212C;
+
+}
+
+.item-adventages__value {
+	font-weight: 900;
+	font-size: 46px;
+	line-height: 130%;
+}
+
+.item-adventages__text {
+	line-height: 1.5;
+}
+
+.adventages-main__circle {
+	border-radius: 50%;
+	background: #FF3F3A;
+	width: 8px;
+	height: 8px;
+}
